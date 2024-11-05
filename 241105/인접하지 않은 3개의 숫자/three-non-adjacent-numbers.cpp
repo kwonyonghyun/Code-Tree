@@ -28,7 +28,7 @@ int main(){
     cout<<endl;
     int result=INT_MIN;
     for(int i=3;i<n-1;i++){
-        cout<<L[i-2]<<' '<<board[i]<< ' '<<R[i+2]<<endl;
+        // cout<<L[i-2]<<' '<<board[i]<< ' '<<R[i+2]<<endl;
         result=max(result, L[i-2]+board[i]+R[i+2]);
     }
     cout<<result;
