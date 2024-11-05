@@ -25,7 +25,7 @@ int main(){
     // for(int j=1;j<=n;j++){
     //     cout<<R[j]<<' ';
     // }
-    cout<<endl;
+    // cout<<endl;
     int result=INT_MIN;
     for(int i=3;i<n-1;i++){
         // cout<<L[i-2]<<' '<<board[i]<< ' '<<R[i+2]<<endl;
