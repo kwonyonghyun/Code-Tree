@@ -11,20 +11,15 @@ int main() {
         cin>>board[i];
     }
     int result=0;
-    bool flag=false;
+    vector<int> results;
     for(int i=0;i<n;i++){
         result+=board[i];
         if(result<0){
+            results.push_back(result);
             result=0;
-        }else{
-            flag=true;
         }
     }
-    if(flag){
-        cout<<result;
-    }else{
-        cout<<*max_element(board.begin(), board.end());
-    }
-    
+    results.push_back(result);
+    cout<<*max_element(results.begin(), results.end());
     return 0;
 }
