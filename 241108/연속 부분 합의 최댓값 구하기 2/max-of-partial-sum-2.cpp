@@ -5,21 +5,20 @@ using namespace std;
 
 int main() {
     int n;
-    cin>>n;
-    vector<int> board(n);
-    for(int i=0;i<n;i++){
-        cin>>board[i];
+    cin >> n;
+    vector<int> numbers(n);
+    for (int i = 0; i < n; i++) {
+        cin >> numbers[i];
     }
-    int result=0;
-    vector<int> results;
-    for(int i=0;i<n;i++){
-        result+=board[i];
-        if(result<0){
-            results.push_back(result);
-            result=0;
-        }
+
+    int maxSum = numbers[0];
+    int currentSum = numbers[0];
+
+    for (int i = 1; i < n; i++) {
+        currentSum = max(numbers[i], currentSum + numbers[i]);
+        maxSum = max(maxSum, currentSum);
     }
-    results.push_back(result);
-    cout<<*max_element(results.begin(), results.end());
+
+    cout << maxSum << endl;
     return 0;
 }
