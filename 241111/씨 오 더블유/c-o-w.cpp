@@ -24,7 +24,6 @@ int main() {
             R[i]=R[i+1];
         }
     }
-    cout<<endl;
     int result=0;
     for(int i=1;i<n;i++){
         if(input[i-1]=='O'){
