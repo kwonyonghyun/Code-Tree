@@ -16,16 +16,19 @@ int main() {
     int startIdx=0;
     int endIdx=0;
     int result=0;
-    result+=board[0];
     int ans=INT_MAX;
     for(int i=0;i<n;i++){
         endIdx++;
-        result+=board[endIdx];
-        while(result>s){
+        result+=board[i];
+        while(result>=s){
             result-=board[startIdx];
             startIdx++;
-            ans=min(ans, endIdx-startIdx+2);
+            ans=min(ans, endIdx-startIdx+1);
         }
+    }
+    if(ans==INT_MAX){
+        cout<<-1;
+        return 0;
     }
     cout<<ans;
     return 0;
