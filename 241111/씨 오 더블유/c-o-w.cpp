@@ -24,7 +24,7 @@ int main() {
             R[i]=R[i+1];
         }
     }
-    int result=0;
+    long long result=0;
     for(int i=1;i<n-1;i++){
         if(input[i]=='O'){
             result+=L[i]*R[i+2];
