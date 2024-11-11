@@ -25,9 +25,9 @@ int main() {
         }
     }
     int result=0;
-    for(int i=1;i<n;i++){
-        if(input[i-1]=='O'){
-            result+=L[i-1]*R[i+1];
+    for(int i=1;i<n-1;i++){
+        if(input[i]=='O'){
+            result+=L[i]*R[i+2];
         }
     }
     cout<<result;
