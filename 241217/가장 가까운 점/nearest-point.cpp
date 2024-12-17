@@ -7,7 +7,13 @@ using namespace std;
 
 struct compare{
     bool operator()(pair<int,int> a, pair<int,int> b){
-    return abs(a.first)+abs(a.second) > abs(b.first)+abs(b.second);
+    if(abs(a.first)+abs(a.second)==abs(b.first)+abs(b.second)){
+        if(a.first==b.first){
+            return a.second>b.second;
+        }
+        return a.first>b.first;
+    }
+    return abs(a.first)+abs(a.second)>abs(b.first)+abs(b.second);
 }
 };
 
