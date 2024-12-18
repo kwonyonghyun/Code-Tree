@@ -1,7 +1,7 @@
-#include <iostream>
 #include <vector>
-#include <queue>
+#include <iostream>
 #include <algorithm>
+#include <queue>
 
 using namespace std;
 #define ll long long
@@ -19,10 +19,12 @@ int main(){
         pq.pop();
         int b=pq.top();
         pq.pop();
-        pq.push(abs(a-b));
+        if(a!=b){
+            pq.push(abs(a-b));
+        }
     }
     if(pq.empty()){
-        cout<<-1<<endl;
+        cout<<-1;
     }else{
         cout<<pq.top();
     }
