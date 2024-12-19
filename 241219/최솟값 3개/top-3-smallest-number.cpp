@@ -13,15 +13,19 @@ int main(){
         int a;
         cin>>a;
         pq.push(a);
+        if(i<2){
+            cout<<-1<<endl;
+        }else{
+            int a=pq.top();
+            pq.pop();
+            int b=pq.top();
+            pq.pop();
+            int c=pq.top();
+            pq.pop();
+            cout<<a*b*c<<endl;
+            pq.push(a);
+            pq.push(b);
+            pq.push(c);
+        }
     }
-    if(n<3)[
-        cout<<-1;
-    ]
-    int a=pq.top();
-    pq.pop();
-    int b=pq.top();
-    pq.pop();
-    int c=pq.top();
-    pq.pop();
-    cout<<a*b*c;
 }
