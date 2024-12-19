@@ -22,7 +22,7 @@ int main(){
             pq.pop();
             int c=pq.top();
             pq.pop();
-            cout<<a*b*c<<endl;
+            cout<<(long long)a*b*c<<endl;
             pq.push(a);
             pq.push(b);
             pq.push(c);
