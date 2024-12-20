@@ -1,13 +1,13 @@
 #include <iostream>
 #include <map>
 using namespace std;
-
+#define ll long long
 int main() {
     int n;
     cin>>n;
-    map<int,int> m;
+    map<ll,ll> m;
     for(int i=0;i<n;i++){
-        int y,x1,x2;
+        ll y,x1,x2;
         cin>>y>>x1>>x2;
         if(m.find(x1)==m.end()){
             m[y]=x1;
